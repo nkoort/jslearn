@@ -17,7 +17,7 @@ let appData = {
     optionalExpenses: '',
     income: '',
     savings: false
-};  
+}; 
 
 let budgetForDay = (Number(appData.money)  + Number(price1) + Number(price2)) / 30;
 
