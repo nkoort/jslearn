@@ -1,33 +1,81 @@
-// function showFirstMessage (text) {
-//     console.log(text);
-//     let num = 20;
+
+// let box = document.getElementById('box'),
+//     btn = document.getElementsByTagName('button'),
+//     circle = document.getElementsByClassName('circle'),
+//     heart = document.querySelectorAll('.heart'),
+//     oneHeart = document.querySelector('.heart'),
+//     wrapper = document.querySelector('.wrapper');
+
+
+// box.style.backgroundColor = 'blue';
+// btn[1].style.borderRadius = '100%';
+// circle[0].style.backgroundColor = 'red';
+// circle[1].style.backgroundColor = 'yellow';
+// circle[2].style.backgroundColor = 'green';
+
+// for (let i = 0; i < heart.length; i++) {
+//     heart[i].style.backgroundColor = 'blue';
 // }
-// console.log(num);
-// text1 = prompt();
 
-// showFirstMessage(text1);
+// heart.forEach(function(item, i, hearts){
+//    item.style.backgroundColor = 'blue'; 
+// });
 
-// function calc(a, b) {
-    // return (a + b);
-// }
-// console.log(calc(+prompt(), +prompt()));
+// let div = document.createElement('div'),
+//     text = document.createTextNode('I am this');
 
-// function retVar() {
-//     let num = 50;
-//     return num;
-// }
+// div.classList.add('black');
 
-// let anotherNum = retVar();
-// console.log(anotherNum);
+// document.body.appendChild(div);
+// wrapper.appendChild('div');
 
-let str = 'test';
+// console.log(div);
+// console.log(text);
 
-console.log(str.length);
+let button = document.querySelectorAll('button'),
+    wrap = document.querySelector('.wrapper'),
+    link = document.querySelector('a');
 
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
+// button[0].onclick = function () {
+//     
+// };
+// button[0].onclick = function () {
+//     
+// };
 
-let telw = '12.4';
-// console.log(Math.round(telw));
-console.log(parseInt(telw));
-console.log(parseFloat(telw));
+// button[0].addEventListener('click', function(event){
+//     let target = event.target;
+//     console.log('Произошло событие: ' + event.type + ' на элементе - ' + target);
+//     button[0].classList.toggle('active');
+// });
+
+// wrap.addEventListener('click', function(event){
+//     let target = event.target;
+//     console.log('Произошло событие: ' + event.type + ' на элементе - ' + target);
+// });
+// button[0].addEventListener('mouseenter', function() {
+//  console.log('Вы навели на первую кнопку'); 
+// });
+link.addEventListener('mouseenter', function(event){
+    link.style.color = 'red';
+    // console.log('Произошло событие: ' + event.type + ' на элементе - ' + target);
+});
+link.addEventListener('mouseleave', function(event){
+    link.style.color = 'black';
+    // console.log('Произошло событие: ' + event.type + ' на элементе - ' + target);
+});
+link.addEventListener('click', function(event){
+    event.preventDefault();
+    // console.log('Произошло событие: ' + event.type + ' на элементе - ' + target);
+});
+
+button.forEach(function(item) {
+    item.addEventListener('mouseleave', function() {
+        console.log('курсов убрали с элемента');
+    });
+});
+button.forEach(function(item) {
+    item.addEventListener('click', function() {
+        item.classList.toggle('active');
+    });
+});
